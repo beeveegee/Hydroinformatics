@@ -1,5 +1,5 @@
-#This is my debugged version of Relay 2
-# # <- indicates my comment
+##This is BeeVeeGee's debugged version of Relay 2
+##Comment made by BeeVeeGee
 
 #Relay 2: Debug the 4 mistakes to make the code run successfully!
 #Created by Carley Hansen for Hydroinformatics at the U of U
@@ -18,12 +18,12 @@ JRiver<-read.csv('01_JordanRiver.csv')
 discharge<-JRiver$discharge_cfs
 year<-JRiver$year
 month<-JRiver$month
-# #the D in "JRiver$Discharge_cfs" should not be capitilized because the data is set to "discharge_cfs"
+##the D in "JRiver$Discharge_cfs" should not be capitilized because the data is set to "discharge_cfs"
 
 #Find distribution
 summarystats<-summary(discharge)
 print(c(summarystats))
-# #the S ins summary should not be capitalized, it should replicate the variable defined above
+##the S in summary should not be capitalized, it should replicate the variable defined above
 
 #Plot histogram
 hist(discharge)
@@ -40,7 +40,7 @@ for (i in discharge){
   if(i>top_percent|i<bottom_percent){
     counter<-counter+1
   }}
-# # too many { in the for loop, eliminated 1
+## too many { in the for loop, eliminated 1
   
   #Print the result
   startyear<-min(year)
@@ -53,5 +53,5 @@ for (i in discharge){
   bottom_bound<-rep(bottom_percent,length(year))
   lines(year,top_bound,type="l",col="red")
   lines(year,bottom_bound,type="l",col="red")
-  # # xlab was used twice, missing ylab which is for the "discharge"
+  ## xlab was used twice, missing ylab which is for the "discharge"
   
