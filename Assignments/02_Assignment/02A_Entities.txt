@@ -1,0 +1,48 @@
+Conceptual Data Model
+
+A group of researchers recently deployed several instruments to continuously monitor 
+streamflow and water quality at multiple monitoring sites in 3 watersheds 
+located in northern Utah.  The instruments report measurements in numerous datalogger 
+data files that the researcher must now regularly retrieve, organize, 
+quality-control/quality-check, aggregate, and manipulate before they can perform further analysis.  
+
+"Make into a more elegant sentence"
+
+
+1) Describe the entities and relationships that you have included in your data model
+- Multiple Monitoring Sites
+- 1 or More Time Series per Sensor
+- Multiple Sensors at each Site
+- 3 different watersheds
+
+
+There are three watersheds in the network
+- Logan, Provo, Red Butte
+
+Each watershed contains multiple monitoring sites
+- Aquatic, Climate, Storm Sewer
+
+Each monitoring site implements multiple sensors
+- Aquatic: Water Quality - ph, turbidity
+- Climate: temperature, snow depth, precipitation
+
+There are 1 or more time series per sensor 
+
+
+Measurement of DO is 9.8
+- Attribute could be the name of the measured variable, but if there are other
+attributes that you would like to go into (like the value measured of DO, time,
+etc) than it should be it's own entity
+
+Entity
+- Network/WS
+- Site
+- Sensor
+- Parameter
+- Observation
+
+Network
+- Red Butte, Provo, Logan
+
+Site
+- Red
